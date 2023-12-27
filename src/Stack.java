@@ -15,4 +15,15 @@ public class Stack {
         return top == null ? -1 : top.data;
     }
 
+    public boolean isEmpty() {
+        return top == null;
+    }
+
+    public void pop() {
+        if (top == null) {
+            System.out.println("The stack is empty");
+            return;
+        }
+        top = top.next;
+    }
 }

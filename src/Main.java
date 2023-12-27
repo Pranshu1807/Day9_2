@@ -4,6 +4,11 @@ public class Main {
         st.push(70);
         st.push(30);
         st.push(56);
-        System.out.println("The top element is " + st.peek());
+        st.push(40);
+
+        while (!st.isEmpty()) {
+            System.out.println(st.peek());
+            st.pop();
+        }
     }
 }
