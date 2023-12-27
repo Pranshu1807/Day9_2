@@ -7,7 +7,11 @@ public class Main {
         q.enQueue(20);
         q.enQueue(30);
         q.enQueue(40);
+        q.enQueue(50);
 
-        System.out.println(q.getFront());
+        while (!q.isEmpty()) {
+            System.out.println(q.getFront());
+            q.deQueue();
+        }
     }
 }

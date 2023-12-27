@@ -25,4 +25,19 @@ public class Queue {
         }
         return this.front.data;
     }
+
+    public boolean isEmpty() {
+        return this.front == null;
+    }
+
+    public void deQueue() {
+        if (this.front == null) {
+            System.out.println("Queue is Empty");
+            return;
+        }
+        this.front = this.front.next;
+
+        if (this.front == null)
+            this.rear = null;
+    }
 }
