@@ -1,29 +1,37 @@
 public class Stack {
-    public Node top = null;
+    public Node top;
+
+    public Stack() {
+        this.top = null;
+    }
 
     public void push(int value) {
         Node node = new Node(value);
-        if (top == null) {
-            top = node;
+        if (this.top == null) {
+            this.top = node;
         } else {
-            node.next = top;
-            top = node;
+            node.next = this.top;
+            this.top = node;
         }
     }
 
     public int peek() {
-        return top == null ? -1 : top.data;
+        if (this.top == null) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        return this.top.data;
     }
 
     public boolean isEmpty() {
-        return top == null;
+        return this.top == null;
     }
 
     public void pop() {
-        if (top == null) {
+        if (this.top == null) {
             System.out.println("The stack is empty");
             return;
         }
-        top = top.next;
+        this.top = this.top.next;
     }
 }
